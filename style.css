@@ -162,6 +162,68 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 /* Hamburger Menu Css End */
 
+
+.lumen-hero-section {
+    color: oklch(88% .014 70);
+}
+
+.hero__content {
+    max-width: 56rem;
+}
+
+.hero__badge {
+    display: inline-block;
+    padding: 4px 15px;
+    font-size: 0.75rem;
+    background: 0 0;
+    border: 1px solid #ffffff29;
+    border-radius: 40px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.hero__badge:before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    background-color: red;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+    border-radius: 50%
+}
+
+.hero__eyebrow {
+    margin-top: 24px;
+}
+
+.hero__title {
+    margin-top: 40px;
+}
+
+.hero__description {
+    color: oklch(46% .02 60);
+    margin-top: 28px;
+    max-width: 42rem;
+}
+
+.hero__description p {
+    font-size: 18px;
+}
+
+.hero__buttons {
+    margin-top: 45px;
+    display: flex;
+    gap: 12px;
+}
+
+
+/*
+=====================================
+ Footer Css Start 
+=====================================
+ */
 .site-footer {
     background-color: oklch(18% .02 60);
     color: var(--lumen-white);

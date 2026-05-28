@@ -772,7 +772,7 @@ h6,
 
 /* Button Base Styles */
 .site-btn {
-	padding: 1rem 1.5625rem;
+	padding: 1rem 1.5rem;
 	font-size: 15px;
 	line-height: normal;
 	font-weight: 500;
@@ -788,6 +788,19 @@ h6,
 .site-btn:hover {
 	background: #302017;
 	transform: translateY(-1px);
+}
+
+.btn-orange {
+	background-color: var(--lumen-orange);
+}
+
+.btn-orange:hover {
+	background-color: var(--lumen-orange2);
+}
+
+.btn-transparent {
+	background-color: transparent;
+	border: 1px solid #ffffff2e;
 }
 
 .border-gray {
