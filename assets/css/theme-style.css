@@ -773,7 +773,7 @@ h6,
 /* Button Base Styles */
 .site-btn {
 	padding: 1rem 1.5625rem;
-	font-size: 1rem;
+	font-size: 15px;
 	line-height: normal;
 	font-weight: 500;
 	text-decoration: none;

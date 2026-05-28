@@ -282,16 +282,73 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .footer-widget-box ul li a {
+    color: oklch(88% .014 70);
     text-decoration: none;
     display: block;
+    transition: 0.3s all ease;
+}
+
+.footer-widget-box ul li a:hover {
+    color: var(--lumen-white);
 }
 
 .footer-bottom-inner {
     margin-top: 80px;
     border-top: 1px solid #ffffff1f;
+    gap: 1.5rem;
     padding-top: 30px;
     display: flex;
     justify-content: space-between;
     color: oklch(88% .014 70);
     font-size: 14px;
+}
+
+@media only screen and (max-width: 1199px) {
+    .footer-top-inner {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-widget-box:first-child {
+        width: 24rem;
+    }
+
+    .footer-description {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .footer-top-inner {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-widget-box:first-child {
+        width: 100%;
+        grid-column: span 3;
+    }
+
+    .footer-description {
+        font-size: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .footer-top-inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-widget-box:first-child {
+        width: 100%;
+        grid-column: span 2;
+    }
+
+    .footer-description {
+        font-size: 1.125rem;
+    }
+
+    .footer-bottom-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
