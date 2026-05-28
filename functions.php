@@ -123,45 +123,45 @@ function lumen_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Platform', 'lumen' ),
-			'id'            => 'Platform',
+			'id'            => 'platform',
 			'description'   => esc_html__( 'Add widgets here.', 'lumen' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
 		),
 	);
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Company', 'lumen' ),
-			'id'            => 'Company',
+			'id'            => 'company',
 			'description'   => esc_html__( 'Add widgets here.', 'lumen' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
 		),
 	);
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Resources', 'lumen' ),
-			'id'            => 'Resources',
+			'id'            => 'resources',
 			'description'   => esc_html__( 'Add widgets here.', 'lumen' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
 		),
 	);
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Legal', 'lumen' ),
-			'id'            => 'Legal',
+			'id'            => 'legal',
 			'description'   => esc_html__( 'Add widgets here.', 'lumen' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
 		),
 	);
 }
@@ -211,5 +211,4 @@ if( function_exists('acf_add_options_page') ) {
 	'parent_slug'  => 'theme-general-settings',
   ));
 }
-
 

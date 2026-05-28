@@ -126,11 +126,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     }
 
     .hamburger-menu-inner {
-        max-width: 450px;
+        max-width: 28.125rem;
         margin-left: auto;
         background: var(--lumen-white);
         height: 100%;
-        padding: 40px;
+        padding: 2.5rem;
         position: relative;
         right: -15.625rem;
         transition: 0.3s all ease;
@@ -142,17 +142,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
     .menu-close {
         position: absolute;
-        top: 40px;
-        right: 40px;
+        top: 2.5rem;
+        right: 2.5rem;
         z-index: 999;
     }
 
     .hamburger-menu {
-        margin-top: 50px;
+        margin-top: 3.125rem;
     }
 
     .hamburger-footer {
-        margin-top: 40px;
+        margin-top: 2.5rem;
     }
 
     .hamburger-menu-inner {
@@ -161,3 +161,137 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 /* Hamburger Menu Css End */
+
+.site-footer {
+    background-color: oklch(18% .02 60);
+    color: var(--lumen-white);
+}
+
+.newsletter-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #3a2a22;
+    padding-bottom: 0.625rem;
+    gap: 1.25rem;
+}
+
+.newsletter-input {
+    flex: 1;
+}
+
+.newsletter-input input[type="email"] {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #8a7b72;
+    font-size: 1.125rem;
+    outline: none;
+}
+
+.newsletter-input input::placeholder {
+    color: #8a7b72;
+}
+
+.newsletter-submit input[type="submit"] {
+    background: transparent;
+    border: none;
+    color: var(--lumen-white);
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.newsletter-submit input[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+.wpcf7-spinner {
+    display: none;
+}
+
+.footer-top-inner {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+    gap: 3.75rem;
+}
+
+.footer-widget-box:first-child {
+    width: 31.25rem;
+}
+
+.footer-description {
+    font-size: 2.25rem;
+    margin-top: 2.5rem;
+    line-height: 1.05;
+}
+
+.footer-tagline {
+    margin-top: 50px;
+    color: #c8b39c;
+    position: relative;
+    padding-left: 2rem;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.footer-tagline:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    opacity: .5;
+    height: 1px;
+    background-color: rgb(200, 179, 156);
+}
+
+.widget-title {
+    position: relative;
+    font-size: 14px;
+    padding-left: 2rem;
+    text-transform: uppercase;
+    color: #c8b39c;
+}
+
+.widget-title:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    opacity: .5;
+    height: 1px;
+    background-color: rgb(200, 179, 156);
+}
+
+.contact-form {
+    margin-top: 1.125rem;
+}
+
+.footer-widget-box ul {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.625rem
+}
+
+.footer-widget-box ul li a {
+    text-decoration: none;
+    display: block;
+}
+
+.footer-bottom-inner {
+    margin-top: 80px;
+    border-top: 1px solid #ffffff1f;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: oklch(88% .014 70);
+    font-size: 14px;
+}
