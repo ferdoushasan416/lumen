@@ -187,7 +187,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     content: "";
     width: 4px;
     height: 4px;
-    background-color: red;
+    background-color: var(--lumen-orange);
     top: 50%;
     transform: translateY(-50%);
     left: 8px;
@@ -195,7 +195,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .hero__eyebrow {
+    font-size: 14px;
     margin-top: 24px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.text-tagline:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    opacity: .5;
+    height: 1px;
+    background-color: rgb(200, 179, 156);
 }
 
 .hero__title {
@@ -218,6 +233,50 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     gap: 12px;
 }
 
+.hero-counter-wrapper {
+    margin-top: 70px;
+    border: 1px solid #ffffff1a;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.hero-counter:not(:first-child) {
+    border: 1px solid #ffffff1a;
+}
+
+.hero-counter {
+    padding: 40px 30px;
+}
+
+.counter-number {
+    color: var(--lumen-orange);
+    font-size: 3rem;
+}
+
+.counter-text {
+    margin-top: 20px;
+    color: color-mix(in oklab, var(--lumen-white) 60%, transparent);
+}
+
+@media only screen and (max-width: 991px) {
+
+    .hero-counter {
+        padding: 20px;
+    }
+
+    .counter-number {
+        font-size: 2.25rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .hero-counter-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
 
 /*
 =====================================

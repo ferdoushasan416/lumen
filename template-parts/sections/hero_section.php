@@ -10,7 +10,7 @@ $hero_counter_wrapper = get_sub_field('hero_counter_wrapper'); // acf repeater f
 
 ?>
 
-<section class="lumen-hero-section layout-padding pt-50 pb-50 pt-lg-130 pb-lg-100" style="background-color: <?php echo $hero_bg; ?>">
+<section class="lumen-hero-section layout-padding pt-50 pb-50 pt-lg-120 pb-lg-100" style="background-color: <?php echo $hero_bg; ?>">
     <div class="lumen-hero-inner">
         <div class="hero__content">
             <?php if($hero_badge_text): ?>
@@ -20,7 +20,7 @@ $hero_counter_wrapper = get_sub_field('hero_counter_wrapper'); // acf repeater f
             <?php endif; ?>
 
             <?php if($hero_eyebrow): ?>
-                <div class="hero__eyebrow">
+                <div class="hero__eyebrow  text-tagline">
                      <?php echo $hero_eyebrow; ?>
                  </div>
             <?php endif; ?>
@@ -46,8 +46,8 @@ $hero_counter_wrapper = get_sub_field('hero_counter_wrapper'); // acf repeater f
                     <a href="<?php echo $hero_btn_2['url']; ?>" class="site-btn btn-transparent"><?php echo $hero_btn_2['title']; ?></a>
                 <?php endif; ?>
         </div>
-
-            <div class="hero-counter-wrapper">
+    </div>
+     <div class="hero-counter-wrapper">
 
                 <?php 
                     if($hero_counter_wrapper):
@@ -76,5 +76,4 @@ $hero_counter_wrapper = get_sub_field('hero_counter_wrapper'); // acf repeater f
                 endif;
                 ?>
         </div>
-    </div>
 </section>
