@@ -197,8 +197,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .hero__eyebrow {
     font-size: 14px;
     margin-top: 24px;
+}
+
+.text-tagline {
     position: relative;
     padding-left: 30px;
+    font-size: 14px;
 }
 
 .text-tagline:before {
@@ -277,6 +281,66 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     }
 
 }
+
+/*
+=====================================
+ Hero Style End
+=====================================
+ */
+
+
+/*
+=====================================
+ Trusted Style Start
+=====================================
+ */
+.trusted-section {
+    border-bottom: 1px solid #ddd;
+}
+
+.trusted-brands {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 24px;
+    animation: scroll 30s linear infinite;
+}
+
+.trusted-brands:hover {
+    animation-play-state: paused;
+}
+
+.trusted-brand {
+    flex-shrink: 0;
+}
+
+.trusted-brand span {
+    display: block;
+    font-size: 1.5rem;
+    font-family: Instrument Serif, ui-serif, Georgia, serif;
+    color: #181009;
+    opacity: 0.6;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 40px));
+    }
+}
+
+/*
+=====================================
+ Trusted Style End
+=====================================
+ */
+
+
+
+
 
 /*
 =====================================
