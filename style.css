@@ -251,7 +251,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .hero-counter {
-    padding: 40px 30px;
+    padding: 35px 30px;
 }
 
 .counter-number {
@@ -339,8 +339,161 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  */
 
 
+.smart-section-btns .btn-transparent {
+    border-color: var(--lumen-black);
+    color: var(--lumen-black);
+}
 
+.smart-section-btns .btn-transparent:hover {
+    color: var(--lumen-white);
+}
 
+.smart-section-btns {
+    display: flex;
+    gap: 20px;
+}
+
+.smart-media-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 3.125rem;
+}
+
+.smart-section-content {
+    grid-area: content;
+}
+
+.smart-section-media {
+    grid-area: media;
+}
+
+.smart-media-grid.media-left {
+    grid-template-areas: "media content";
+}
+
+.smart-media-grid.media-right {
+    grid-template-areas: "content media";
+}
+
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.gallery-images.column-count-3 .gallery-image:last-child {
+    grid-column: span 2;
+}
+
+.gallery-images img {
+    height: 18.75rem;
+    object-fit: cover;
+}
+
+.smart-section-content .section-title {
+    margin-top: 1.125rem;
+}
+
+.section-description {
+    margin-top: 1.875rem;
+}
+
+.section-description p {
+    font-size: 18px;
+}
+
+.smart-media-list {
+    margin-top: 1.875rem;
+}
+
+.smart-section-btns {
+    margin-top: 1.875rem;
+}
+
+@media only screen and (max-width: 991px) {
+    .smart-media-grid {
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
+    }
+
+}
+
+/*
+=====================================
+ Smart Media Style End
+=====================================
+ */
+
+.section-tagline {
+    letter-spacing: 0.2rem;
+}
+
+.feature-modules .section-title {
+    margin-top: 20px;
+    max-width: 700px;
+}
+
+.module-boxes {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1.5px solid #c9c4b8;
+    border-radius: 1.5rem;
+}
+
+.module-box {
+    padding: 20px;
+    padding: 2rem 1.75rem;
+    border-right: 1px solid #c9c4b8;
+    border-bottom: 1px solid #c9c4b8;
+    transition: background 0.18s;
+    transition: 0.3s all ease;
+
+}
+
+.module-box:nth-child(3),
+.module-box:nth-child(6) {
+    border-right: none;
+}
+
+.module-box:nth-child(4),
+.module-box:nth-child(5),
+.module-box:nth-child(6) {
+    border-bottom: none;
+}
+
+.module-number span {
+    width: 45px;
+    height: 45px;
+    color: var(--lumen-white);
+    background-color: var(--lumen-black2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.module-title {
+    margin-top: 24px;
+}
+
+.module-title h3 {
+    font-weight: 500;
+}
+
+.module-description {
+    margin-top: 1rem;
+}
+
+.module-box:hover .module-number span {
+    background-color: var(--lumen-orange);
+}
+
+.module-box:hover {
+    background-color: var(--lumen-white);
+}
 
 /*
 =====================================
