@@ -7,6 +7,9 @@ $section_description = get_sub_field('section_description');// acf wysiwyg field
 $media_btn_1 = get_sub_field('media_btn_1');// acf button field
 $media_btn_2 = get_sub_field('media_btn_2');// acf button field
 $smart_media_lists = get_sub_field('smart_media_lists');// acf repeater field
+$smart_media_box_contents = get_sub_field('smart_media_box_contents');// acf repeater field
+$smart_box_title = get_sub_field('smart_box_title');// acf text field
+$smart_box_description = get_sub_field('smart_box_description');// acf textarea field
 
 $image = get_sub_field('image');// acf group field
 
@@ -46,6 +49,28 @@ if($media_position === 'left') {
                    <p><?php echo esc_html($section_description); ?></p>
                 </div>
             <?php endif;?>
+
+           <?php if(!empty($smart_media_box_contents)): ?>
+                <div class="smart-media-box-contents">
+                    <?php foreach($smart_media_box_contents as $box_content): ?>
+                        <div class="smart-media-box-content">
+
+                            <?php if($box_content['smart_box_title']): ?>
+                                <div class="smart-box-title">
+                                    <h5><?php echo esc_html($box_content['smart_box_title']); ?></h4>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if($box_content['smart_box_description']): ?>
+                                <div class="smart-box-description">
+                                    <p><?php echo esc_html($box_content['smart_box_description']); ?></p>
+                                </div>
+                            <?php endif; ?>
+
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
             
             <?php if($smart_media_lists): ?>
                 <div class="smart-media-list">
@@ -74,16 +99,20 @@ if($media_position === 'left') {
                        <span class="btn-text"><?php echo esc_html($btn_title); ?></span>
                 </a>
 
-                 <?php if( $media_btn_2 ) {
-                    $btn_url    = $media_btn_2['url'];
-                    $btn_title  = $media_btn_2['title'];
-                    $btn_target = $media_btn_2['target'] ? $media_btn_2['target'] : '_self';
-                 } ?>
-            
-                 <a href="<?php echo esc_url($btn_url); ?>" target="<?php echo esc_attr($btn_target); ?>" 
-                    class="site-btn btn-transparent">
-                       <span class="btn-text"><?php echo esc_html($btn_title); ?></span>
-                </a>
+               <?php if ( ! empty($media_btn_2) ) :
+                        $btn_url    = $media_btn_2['url'];
+                        $btn_title  = $media_btn_2['title'];
+                        $btn_target = ! empty($media_btn_2['target']) ? $media_btn_2['target'] : '_self';
+
+                     ?>
+                        <a href="<?php echo esc_url($btn_url); ?>" 
+                        target="<?php echo esc_attr($btn_target); ?>" 
+                        class="site-btn btn-transparent">
+                            <span class="btn-text">
+                                <?php echo esc_html($btn_title); ?>
+                            </span>
+                        </a>
+                <?php endif; ?>
             </div>
         </div>
         <div class="smart-section-media">

@@ -212,3 +212,134 @@ if( function_exists('acf_add_options_page') ) {
   ));
 }
 
+
+
+if( function_exists('acf_add_local_field_group') ) {
+    acf_add_local_field_group(array(
+        'key' => 'group_flexible_content',
+        'title' => 'Page Builder',
+        'fields' => array(
+            array(
+                'key' => 'field_flexible_content',
+                'label' => 'Flexible Content',
+                'name' => 'flexible_content',
+                'type' => 'flexible_content',
+                'layouts' => array(
+                    // Case Studies Grid Layout
+                    array(
+                        'key' => 'layout_case_studies',
+                        'name' => 'case_studies_grid',
+                        'label' => 'Case Studies Grid',
+                        'sub_fields' => array(
+                            array(
+                                'key' => 'field_cs_eyebrow',
+                                'label' => 'Eyebrow Text',
+                                'name' => 'eyebrow',
+                                'type' => 'text',
+                                'default_value' => 'Selected Work — Case Study',
+                            ),
+                            array(
+                                'key' => 'field_cs_headline',
+                                'label' => 'Headline',
+                                'name' => 'headline',
+                                'type' => 'text',
+                                'default_value' => 'Deployments measured in millions.',
+                            ),
+                            array(
+                                'key' => 'field_cs_button_label',
+                                'label' => 'Button Label',
+                                'name' => 'button_label',
+                                'type' => 'text',
+                                'default_value' => 'All case studies',
+                            ),
+                            array(
+                                'key' => 'field_cs_button_url',
+                                'label' => 'Button URL',
+                                'name' => 'button_url',
+                                'type' => 'url',
+                            ),
+                            // Repeater for cards
+                            array(
+                                'key' => 'field_cs_cards',
+                                'label' => 'Case Study Cards',
+                                'name' => 'cards',
+                                'type' => 'repeater',
+                                'min' => 1,
+                                'max' => 4,
+                                'layout' => 'block',
+                                'sub_fields' => array(
+                                    array(
+                                        'key' => 'field_cs_card_image',
+                                        'label' => 'Card Image',
+                                        'name' => 'card_image',
+                                        'type' => 'image',
+                                        'return_format' => 'array',
+                                    ),
+                                    array(
+                                        'key' => 'field_cs_card_company',
+                                        'label' => 'Company Name',
+                                        'name' => 'company',
+                                        'type' => 'text',
+                                    ),
+                                    array(
+                                        'key' => 'field_cs_card_industry',
+                                        'label' => 'Industry',
+                                        'name' => 'industry',
+                                        'type' => 'text',
+                                    ),
+                                    array(
+                                        'key' => 'field_cs_card_title',
+                                        'label' => 'Card Title',
+                                        'name' => 'card_title',
+                                        'type' => 'textarea',
+                                        'rows' => 2,
+                                    ),
+                                    array(
+                                        'key' => 'field_cs_card_stat_number',
+                                        'label' => 'Stat Number (e.g. −42% or $24M)',
+                                        'name' => 'stat_number',
+                                        'type' => 'text',
+                                    ),
+                                    array(
+                                        'key' => 'field_cs_card_stat_label',
+                                        'label' => 'Stat Label',
+                                        'name' => 'stat_label',
+                                        'type' => 'text',
+                                    ),
+                                    array(
+                                        'key' => 'field_cs_card_stat_color',
+                                        'label' => 'Stat Color',
+                                        'name' => 'stat_color',
+                                        'type' => 'select',
+                                        'choices' => array(
+                                            'orange' => 'Orange',
+                                            'teal'   => 'Teal',
+                                            'gold'   => 'Gold',
+                                        ),
+                                        'default_value' => 'orange',
+                                    ),
+                                    array(
+                                        'key' => 'field_cs_card_link',
+                                        'label' => 'Card Link URL',
+                                        'name' => 'card_link',
+                                        'type' => 'url',
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'page',
+                ),
+            ),
+        ),
+    ));
+}
+

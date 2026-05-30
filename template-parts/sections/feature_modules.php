@@ -1,4 +1,5 @@
 <?php
+$module_bg = get_sub_field('module_bg'); // acf color picker field
 $section_tagline = get_sub_field('section_tagline');// acf text field
 $section_title = get_sub_field('section_title');// acf text field
 $module_boxes = get_sub_field('module_boxes');// acf repeater field
@@ -8,7 +9,7 @@ $module_title = get_sub_field('module_title');// acf text field
 $module_description = get_sub_field('module_description');// acf textarea field
 ?>
 
-<section class="feature-modules layout-padding pt-50 pb-50 pt-lg-120 pb-lg-120">
+<section class="feature-modules layout-padding pt-50 pb-50 pt-lg-120 pb-lg-120" style="background-color: <?php echo $module_bg; ?>">
         <div class="section-header">
               <?php if ($section_tagline): ?>
                 <div class="section-tagline text-tagline">
@@ -31,7 +32,7 @@ $module_description = get_sub_field('module_description');// acf textarea field
                     <?php endif; ?>
                     <?php if ($module['module_title']): ?>
                         <div class="module-title">
-                            <h3><?php echo esc_html($module['module_title']); ?></h3>
+                            <h4><?php echo esc_html($module['module_title']); ?></h4>
                         </div>
                     <?php endif; ?>
                     <?php if ($module['module_description']): ?>
