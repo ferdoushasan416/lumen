@@ -724,9 +724,77 @@ Customer Impact Style End
     }
 }
 
+/*
+=====================================
+Case Studies Style End
+=====================================
+ */
 
 
+.project-timeline .section-heading {
+    max-width: 700px;
+}
 
+.project-timeline-content {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-radius: 30px;
+    background-color: var(--lumen-white2);
+    border: 1px solid #ddd;
+
+}
+
+.project-timeline-box:not(:first-child) {
+    border-left: 1px solid #ddd;
+}
+
+.project-timeline-box {
+    padding: 30px;
+}
+
+.project-timeline-number h3 {
+    color: var(--lumen-orange);
+}
+
+.project-timeline-box-title {
+    margin-top: 1rem;
+}
+
+.project-timeline-box-description {
+    margin-top: 14px;
+}
+
+@media only screen and (max-width: 991px) {
+    .project-timeline-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-timeline-box:nth-child(1),
+    .project-timeline-box:nth-child(2) {
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .project-timeline-content {
+        grid-template-columns: 1fr;
+    }
+
+    .project-timeline-box:not(:first-child) {
+        border-left: 0;
+    }
+
+    .project-timeline-box:nth-child(3) {
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+/*
+=====================================
+ Project Timeline Style End 
+=====================================
+ */
 
 
 

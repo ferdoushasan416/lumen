@@ -6,7 +6,7 @@ $project_timeline_boxes = get_sub_field('project_timeline_boxes');// acf repeate
 ?>
 
 
-<section class="project-timeline layout-padding pt-50 pt-lg-80" style="background-color: <?php echo $timeline_bg; ?>">
+<section class="project-timeline layout-padding pt-50 pb-50 pt-lg-80 pb-lg-80 mt-50 mt-lg-80" style="background-color: <?php echo $timeline_bg; ?>">
       <div class="section-heading">
             <h2><?php echo esc_html($section_title); ?></h2>
        </div>
